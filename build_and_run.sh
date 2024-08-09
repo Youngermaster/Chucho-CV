@@ -10,4 +10,6 @@ docker build -t latex_env .
 # Run the container in interactive mode and remove it on exit
 # Mount the LaTeX project directory from the host to '/project' inside the container
 # Replace '/path/to/your/latex/project' with the actual path to your LaTeX project on your host machine.
-docker run -it --rm -v /path/to/your/latex/project:/project latex_env
+#docker run -it --rm -v /path/to/your/latex/project:/project latex_env
+# Or automatically with:
+docker run -it --rm -v $(pwd):/project latex_env
